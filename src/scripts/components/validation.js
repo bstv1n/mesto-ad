@@ -19,9 +19,7 @@ function clearValidation(formElement, config) {
   const inputs = formElement.querySelectorAll(config.inputSelector);
   inputs.forEach(input => {
     const errorElement = formElement.querySelector(`#${input.id}-error`);
-    console.log(input.id);
     errorElement.textContent = "";
-    console.log(errorElement)
     hideInputError(input, errorElement, config.inputErrorClass, config.errorClass);
   });
 }
@@ -33,7 +31,6 @@ function setEventListeners(form, config) {
   inputs.forEach((input) => {
     const errorElement = form.querySelector(`#${input.id}-error`);
     input.addEventListener('input', () => {
-      console.log(36);
       if (input.value === ""){
         hideInputError(input, errorElement, config.inputErrorClass, config.errorClass);
       }

@@ -25,5 +25,5 @@ export const setCloseModalWindowEventListeners = (modalWindow) => {
     if (evt.target.classList.contains("popup")) {
       closeModalWindow(modalWindow);
     }
-  });
+  })
 }
